@@ -287,6 +287,7 @@ func (bs *BinanceFutures) PlaceFutureOrder(currencyPair CurrencyPair, contractTy
 	param.Set("newClientOrderId", GenerateOrderClientId(32))
 	param.Set("quantity", amount)
 	param.Set("newOrderRespType", "ACK")
+	param.Set("positionSide", "LONG")
 
 	if matchPrice == 0 {
 		param.Set("type", "LIMIT")
